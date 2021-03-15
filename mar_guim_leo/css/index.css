@@ -1,0 +1,14 @@
+.register {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.passtip {
+    display: block;
+    color: gray;
+    margin-top: -0.5rem;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,15 @@
+.nameslink {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    margin-top: -0.5rem;
+}
+
+.back {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 2rem;
+}

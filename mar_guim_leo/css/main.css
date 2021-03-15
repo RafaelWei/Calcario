@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #e9ecef;
+	font-family: Arial;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.container {
+	max-width: 640px;
+	margin: auto;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+}
+
+input {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin-bottom: 0.5rem;
+	padding: 0.4rem;
+	border-width: 0.1rem;
+	border-radius: 0.25rem;
+	box-sizing: border-box;
+}
+
+button {
+	display: block;
+	width: 100%;
+	margin-bottom: 0.5rem;
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+	padding: 0.4rem;
+	border-radius: 0.25rem;
+}
+
+progress {
+	margin-bottom: 0.5rem;
+	border-radius: 0.25rem;
+}
+progress::-moz-progress-bar { background: green; }
+progress::-webkit-progress-value { background: green; }
