@@ -5,69 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-light bg-dark">
+        <nav class="navbar navbar-light bg-dark" style="max-height: 10%;">
           <div class="container-fluid">
-            <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/index.html" class="navbar-brand text-white">Calcario</a>
+            <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/index.html"class="navbar-brand text-white">
+              Calcario
+            </a>
             <form class="d-flex">
               <!-- <button class="btn btn-primary" type="submit">Orientador</button>
               <button class="btn btn-secondary" type="submit">Coordenador</button>
               <button class="btn btn-info" type="submit">Aluno</button> -->
               <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
-            <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/pesquisa.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
+              <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/pesquisa.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
             </form>
           </div>
         </nav>
-      </header>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <div class="row">
-            <div
-              class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-4 offset-sd-3 offset-lg-4"
-            >
-              <h1 class="mb-3 text-center">Por favor, faça o login</h1>
-              <form class="mb-3">
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="exemplo@email.com"
-                    id="email"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="password">Senha:</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    required
-                  />
-                </div>
-                <progress max="100" value="0" id="meter"></progress>
-                <div class="form-group">
-                  <label for="passwordConfirm">Confirme a senha:</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="passwordConfirm"
-                    required
-                  />
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">
-                  Criar conta
-                </button>
-              </form>
+    </header>
+    <div class="container register" style="max-width: 100%; max-height: 100%; margin-top: 0;">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                <h3>Welcome</h3>
+                <p>Find interesting projects to increase your portifilio!</p>
+                <input type="submit" name="" value="Login"/><br/>
             </div>
-          </div>
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Employee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hirer</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Apply as a Employee</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <div class="maxl">
+                                        <label class="radio inline"> 
+                                            <input type="radio" name="gender" value="male" checked>
+                                            <span> Male </span> 
+                                        </label>
+                                        <label class="radio inline"> 
+                                            <input type="radio" name="gender" value="female">
+                                            <span>Female </span> 
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                        <option>What is your Birthdate?</option>
+                                        <option>What is Your old Phone Number</option>
+                                        <option>What is your Pet Name?</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
+                                </div>
+                                <input type="submit" class="btnRegister"  value="Register"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3  class="register-heading">Apply as a Hirer</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                        <option>What is your Birthdate?</option>
+                                        <option>What is Your old Phone Number</option>
+                                        <option>What is your Pet Name?</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="`Answer *" value="" />
+                                </div>
+                                <input type="submit" class="btnRegister"  value="Register"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
 </body>
 </html>
