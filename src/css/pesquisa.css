@@ -846,7 +846,7 @@ html {
     font-size: 18px;
     height: 70px;
     color: #fff;
-    background: linear-gradient(to right, #2c6dd5 0%, #2c6dd5 28%, #ff4b5a 91%, #ff4b5a 100%);
+    background: linear-gradient(to right, #000428 0%, #000428 28%, #004e92 91%, #004e92 100%);
     font-family: 'Lato', sans-serif;
   }
   
@@ -877,7 +877,7 @@ html {
     min-width: 100px;
     height: 40px;
     padding: 0 15px;
-    background: linear-gradient(to right, #2c6dd5 0%, #2c6dd5 28%, #ff4b5a 91%, #ff4b5a 100%);
+    background: linear-gradient(to right, #000428 0%, #000428 28%, #004e92 91%, #004e92 100%);
     white-space: nowrap;
     border-radius: 20px;
     font-size: 14px;
@@ -893,7 +893,7 @@ html {
   
   .s010 form .inner-form .input-field .btn-search:before {
     border-radius: inherit;
-    background: linear-gradient(45deg, #ff4b5a 0%, #ff4b5a 28%, #2c6dd5 91%, #2c6dd5 100%);
+    background: linear-gradient(45deg, #004e92 0%, #004e92 28%, #000428 91%, #000428 100%);
     content: '';
     display: block;
     height: 100%;
@@ -1133,7 +1133,8 @@ html {
   }
   
   .s010 form .inner-form .advance-search .choices.valid .choices__inner {
-    background: linear-gradient(to right, #2c6dd5 0%, #2c6dd5 28%, #ff4b5a 91%, #ff4b5a 100%);
+    max-height: 10px;
+    background: linear-gradient(to right, #000428 0%, #000428 28%, #004e92 91%, #004e92 100%);
   }
   
   .s010 form .inner-form .advance-search .choices.valid:after {
@@ -1146,6 +1147,7 @@ html {
   
   @media screen and (max-width: 767px) {
     .s010 form .inner-form .basic-search .input-field input {
+      max-height: 10px;
       padding: 10px 110px 10px 30px;
     }
     .s010 form .inner-form .basic-search .input-field .icon-wrap {
@@ -1166,6 +1168,7 @@ html {
     .s010 form .inner-form .advance-search .input-field {
       width: 100%;
       margin-bottom: 20px;
+      max-height: 10px;
     }
   }
   
