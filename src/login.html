@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand text-white">Sugado</a>
+            <form class="d-flex">
+              <!-- <button class="btn btn-primary" type="submit">Orientador</button>
+              <button class="btn btn-secondary" type="submit">Coordenador</button>
+              <button class="btn btn-info" type="submit">Aluno</button> -->
+              <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+              <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/login.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
+            </form>
+          </div>
+        </nav>
+      </header>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-4 offset-sd-3 offset-lg-4"
+            >
+              <h1 class="mb-3 text-center">Por favor, faça o login</h1>
+              <form class="mb-3">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="exemplo@email.com"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Senha:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    required
+                  />
+                </div>
+                <progress max="100" value="0" id="meter"></progress>
+                <div class="form-group">
+                  <label for="passwordConfirm">Confirme a senha:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="passwordConfirm"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Criar conta
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
