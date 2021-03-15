@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Calcário</title>
+    <script defer src="scripts/upload.js"></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Icon -->
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/upload.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Faça o upload do seu PFC</h1>
+        <form onsubmit="return alert('Seu PFC foi submetido.');">
+            <div>
+                <label for="Autor">Número de autores:</label>
+                <input id="Autor" type="number">
+                <a href="#" class="nameslink" id="filldetails" onclick='addFields("Autor", "authors")'>Digitar nomes</a>
+                <div id="authors" />
+            </div>
+			<div>
+                <label for="Orientador">Número de orientadores:</label>
+                <input id="Orientador" type="number">
+                <a href="#" class="nameslink" id="filldetails" onclick='addFields("Orientador", "supervisors")'>Digitar nomes</a>
+                <div id="supervisors" />
+            </div>
+            <div>
+				<label for="title">Título do PFC:</label>
+				<input id="title" type="text" required />
+			</div>
+            <div>
+				<label for="date">Data de publicação:</label>
+				<input id="date" type="date" required />
+			</div>
+            <div>
+				<label for="engineering">Engenharia:</label>
+				<select name="engineering" id="engineering">
+                    <option value="" disabled selected>Selecione sua opção</option>
+                    <option value="carto">Cartográfica</option>
+                    <option value="comp">Computação</option>
+                    <option value="ele">Elétrica</option>
+                    <option value="elo">Eletrônica</option>
+                    <option value="com">Comunicações</option>
+                    <option value="mat">Materiais</option>
+                    <option value="quim">Química</option>
+                    <option value="mecarm">Mecânica e de Armamento</option>
+                    <option value="mecauto">Mecânica e de Automóvel</option>
+                    <option value="constru">Fortificação e Construção</option>
+                </select>
+			</div>
+            <div>
+				<label for="fileupload">PFC:</label>
+				<input id="fileupload" type="file" required />
+			</div>
+			<button type="submit">Enviar</button>
+		</form>
+        <a href="search.html" class="back">Voltar para busca</a>
+    </div>
+</body>
+</html>

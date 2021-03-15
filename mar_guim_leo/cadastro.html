@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Calcário</title>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Icon -->
+	<script defer src="scripts/md5.min.js"></script>
+	<script defer src="scripts/index.js"></script>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+	<div class="container">
+		<h1>Formulário de cadastro de conta</h1>
+		<form action="javascript:;" onsubmit="return validateAndSubmit();">
+			<div>
+				<label for="emailInputField">Email:</label>
+				<input id="emailInputField" type="email" placeholder="eu@examplo.com.br" required />
+			</div>
+			<div>
+				<label for="passwordInputField">Senha:</label>
+				<input id="passwordInputField" type="password" oninput="checkPasswordStrength();" required />
+				<progress id="passwordProgress" max="100" value="0"></progress>
+				<p class="passtip">Sua senha deve conter ao menos 16 caracteres, incluindo ao menos um número,
+					uma letra minúscula, uma letra maiúscula e um caracter especial.</p>
+			</div>
+			<div>
+				<label for="passwordConfirmInputField">Confirme sua senha:</label>
+				<input id="passwordConfirmInputField" type="password" required />
+			</div>
+			<button type="submit">Confirmar</button>
+		</form>
+	</div>
+</body>
+</html>
