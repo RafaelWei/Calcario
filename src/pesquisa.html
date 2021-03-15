@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-dark">
+          <div class="container-fluid">
+            <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/index.html" class="navbar-brand text-white">Calcario</a>
+            <form class="d-flex">
+              <!-- <button class="btn btn-primary" type="submit">Orientador</button>
+              <button class="btn btn-secondary" type="submit">Coordenador</button>
+              <button class="btn btn-info" type="submit">Aluno</button> -->
+              <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+            <a href="/Users/rafaelwei/Documents/WebProjects/LabProg/src/pesquisa.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
+            </form>
+          </div>
+        </nav>
+    </header>
+    <form action="/Users/rafaelwei/Documents/WebProjects/LabProg/src/index.html" class="row g-3 mt-3 ml-3 mr-3">
+        <div class="col-md-3">
+          <label for="validationServer01" class="form-label">Titulo</label>
+          <input type="text" class="form-control" id="validationServer01" required>
+          <div class="valid-feedback" style="display: none">
+            Escolha um titulo valido
+        </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationServerUsername" class="form-label">Autores</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback" style="display: none;">
+              Escolha um autor valido
+            </div>
+        </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationServer03" class="form-label">Orientadores</label>
+          <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+          <div id="validationServer03Feedback" class="invalid-feedback" style="display: none;">
+            Escolha um orientador valido
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Instituicao de ensino</label>
+          <input type="text" class="form-control" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+          <div id="validationServer05Feedback" class="invalid-feedback" style="display: none;">
+            Escolha uma instituicao valida
+          </div>
+        </div>
+        <div class="col-12 mt-3">
+          <button class="btn btn-primary" type="submit">Procurar</button>
+        </div>
+    </form>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
