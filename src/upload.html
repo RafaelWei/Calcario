@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Calcário</title>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Icon -->
-    <link rel="stylesheet" href="css/main.css"/>
-    <link rel="stylesheet" href="css/index.css"/>
-    <script defer src="scripts/upload.js"></script>
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Icon -->
-    <link rel="stylesheet" href="css/main.css"/>
-    <link rel="stylesheet" href="css/upload.css"/>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-light bg-dark">
-          <div class="container-fluid">
-            <a href="index.html" class="navbar-brand text-white">Calcario</a>
-            <form class="d-flex">
-              <!-- <button class="btn btn-primary" type="submit">Orientador</button>
-              <button class="btn btn-secondary" type="submit">Coordenador</button>
-              <button class="btn btn-info" type="submit">Aluno</button> -->
-              <a href="login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
-            <a href="pesquisa.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
-            <a href="upload.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Upload</a>
-            </form>
-          </div>
-        </nav>
-    </header>
-    <div class="container">
-        <h1>Faça o upload do seu PFC</h1>
-        <form onsubmit="return alert('Seu PFC foi submetido.');">
-            <div>
-                <label for="Autor">Número de autores:</label>
-                <input id="Autor" type="number">
-                <a href="#" class="nameslink" id="filldetails" onclick='addFields("Autor", "authors")'>Digitar nomes</a>
-                <div id="authors" />
-            </div>
-			<div>
-                <label for="Orientador">Número de orientadores:</label>
-                <input id="Orientador" type="number">
-                <a href="#" class="nameslink" id="filldetails" onclick='addFields("Orientador", "supervisors")'>Digitar nomes</a>
-                <div id="supervisors" />
-            </div>
-            <div>
-				<label for="title">Título do PFC:</label>
-				<input id="title" type="text" required />
-			</div>
-            <div>
-				<label for="date">Data de publicação:</label>
-				<input id="date" type="date" required />
-			</div>
-            <div>
-				<label for="engineering">Engenharia:</label>
-				<select name="engineering" id="engineering">
-                    <option value="" disabled selected>Selecione sua opção</option>
-                    <option value="carto">Cartográfica</option>
-                    <option value="comp">Computação</option>
-                    <option value="ele">Elétrica</option>
-                    <option value="elo">Eletrônica</option>
-                    <option value="com">Comunicações</option>
-                    <option value="mat">Materiais</option>
-                    <option value="quim">Química</option>
-                    <option value="mecarm">Mecânica e de Armamento</option>
-                    <option value="mecauto">Mecânica e de Automóvel</option>
-                    <option value="constru">Fortificação e Construção</option>
-                </select>
-			</div>
-            <div>
-				<label for="fileupload">PFC:</label>
-				<input id="fileupload" type="file" required />
-			</div>
-			<button type="submit">Enviar</button>
-		</form>
-        <a href="search.html" class="back">Voltar para busca</a>
-    </div>
-</body>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Calcário - Upload</title>
+		<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Icon -->
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/index.css"/>
+		<script defer src="scripts/upload.js"></script>
+		<link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Icon -->
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/upload.css"/>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-light bg-dark">
+				<div class="container-fluid">
+					<a href="index.html" class="navbar-brand text-white">Calcário</a>
+					<form class="d-flex">
+						<!-- <button class="btn btn-primary" type="submit">Orientador</button>
+	      <button class="btn btn-secondary" type="submit">Coordenador</button>
+	      <button class="btn btn-info" type="submit">Aluno</button> -->
+	      <a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+	      <a href="pesquisa.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
+	      <a href="upload.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Upload</a>
+					</form>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<h1>Faça o upload do seu PFC</h1>
+			<form onsubmit="return alert('Seu PFC foi submetido.');">
+				<div>
+					<label for="Autor">Número de autores:</label>
+					<input id="Autor" type="number">
+					<a href="#" class="nameslink" id="filldetails" onclick='addFields("Autor", "authors")'>Digitar nomes</a>
+					<div id="authors" />
+					</div>
+					<div>
+						<label for="Orientador">Número de orientadores:</label>
+						<input id="Orientador" type="number">
+						<a href="#" class="nameslink" id="filldetails" onclick='addFields("Orientador", "supervisors")'>Digitar nomes</a>
+						<div id="supervisors" />
+						</div>
+						<div>
+							<label for="title">Título:</label>
+							<input id="title" type="text" required />
+						</div>
+						<div>
+							<label for="inst">Instituição de ensino:</label>
+							<input id="inst" type="text" required />
+						</div>
+						<div>
+							<label for="type">Tipo:</label>
+							<select name="type" id="type">
+								<option value="" disabled selected>Selecione sua opção</option>
+								<option value="pfc">PFC</option>
+								<option value="dissertacao">Dissertação</option>
+								<option value="tese">Tese</option>
+							</select>
+						</div>
+						<div>
+							<label for="date">Data de publicação:</label>
+							<input id="date" type="date" required />
+						</div>
+						<div>
+							<label for="area">Área de pesquisa:</label>
+							<select name="area" id="area">
+								<option value="" disabled selected>Selecione sua opção</option>
+								<option>Ciência da computação</option>
+								<option>Engenharia da computação</option>
+								<option>Engenharia elétrica</option>
+								<option>Engenharia eletrônica</option>
+								<option>Sistemas de informação</option>
+							</select>
+						</div>
+						<div>
+							<label for="keywords">Palavras-chave:</label>
+							<input id="keywords" type="text" required />
+						</div>
+						<div>
+							<label for="summary">Resumo:</label>
+							</br>
+							<textarea id="summary" type="text" required></textarea>
+						</div>
+						<div>
+							<label for="fileupload">Arquivo:</label>
+							<input id="fileupload" type="file" required />
+						</div>
+						<button type="submit">Enviar</button>
+			</form>
+	</body>
 </html>
