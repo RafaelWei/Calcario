@@ -1,4 +1,6 @@
-# Calcario
+# Calcário
+
+Github do projeto: https://github.com/VelvetThunderr/Calcario
 
 Projeto de VE de laboratório de programação III do primeiro semestre do quarto ano de computação.
 
