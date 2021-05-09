@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form>
+	<div class="inner-form">
+		<div class="basic-search">
+			<div class="input-field">
+				<input id="search" type="text" placeholder="Palavras-chave" />
+				<div class="icon-wrap">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="advance-search">
+			<span class="desc">Mais Filtros</span>
+			<div class="row">
+				<div class="input-field">
+					<div class="input-select">
+						<select data-trigger="" name="choices-single-defaul">
+							<option placeholder="" value="">Título</option>
+							<option>Instalação e configuração de serviços web para disponibilização de dados espaciais em operações militares.</option>
+							<option>Sistema para análise de redes de relacionamentos em instituição de ensino superior.</option>
+							<option>Arquitetura de segurança para serviços web de disponibilização de dados espaciais em operações militares.</option>
+							<option>Otimização do Algoritmo VSTC Através do Uso da Arquitetura do Cray XK7.</option>
+							<option>Ferramenta para Análise Comparativa entre Simulação e Modelagem analítica.</option>
+						</select>
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-select">
+						<select data-trigger="" name="choices-single-defaul">
+							<option placeholder="" value="">Autor</option>
+							<option>Alexandre Guimarães</option>
+							<option>Gabriel Barbosa</option>
+							<option>Julia Perdigão</option>
+							<option>Leonardo Duarte</option>
+							<option>Pedro Martins</option>
+							<option>Pietro Geronimi</option>
+							<option>Rafael Wei</option>
+						</select>
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-select">
+						<select data-trigger="" name="choices-single-defaul">
+							<option placeholder="" value="">Orientador</option>
+							<option>TC Anderson</option>
+							<option>TC Duarte</option>
+							<option>Raquel</option>
+							<option>Ricardo Choren</option>
+							<option>Maria Claudia</option>
+							<option>Ronaldo Goldschimit</option>
+							<option>Claudia Justel</option>
+							<option>TC Cardoso</option>
+							<option>Maj Leandro</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row second">
+				<div class="input-field">
+					<div class="input-select">
+						<select data-trigger="" name="choices-single-defaul">
+							<option placeholder="" value="">Instituição de ensino</option>
+							<option>Instituto Militar de Engenharia</option>
+							<option>Universidade Federal do Rio de Janeiro</option>
+						</select>
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-select">
+						<select data-trigger="" name="choices-single-defaul">
+							<option placeholder="" value="">Área de Pesquisa</option>
+							<option>Ciência da computação</option>
+							<option>Engenharia da computação</option>
+							<option>Engenharia elétrica</option>
+							<option>Engenharia eletrônica</option>
+							<option>Sistemas de informação</option>
+						</select>
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-select">
+						<select data-trigger="" name="choices-single-defaul">
+							<option placeholder="" value="">Tipo</option>
+							<option>PFC</option>
+							<option>Dissertação</option>
+							<option>Tese</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row third">
+				<div class="input-field">
+					<div class="group-btn">
+						<button class="btn-delete" id="delete">Limpar</button>
+						<button class="btn-search">Buscar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}

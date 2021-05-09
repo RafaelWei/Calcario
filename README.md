@@ -17,14 +17,4 @@ Componentes do grupo:
 
 ## Uso
 
-Em uma máquina com [npm](https://www.npmjs.com/), após clonar o projeto, rodar o comando abaixo na pasta root do git.
-
-```console
-$ npm install
-```
-
-Em seguida, basta abrir qualquer um dos arquivos HTML no seu navegador favorito.
-
-```console
-$ firefox src/index.html
-```
+tbd

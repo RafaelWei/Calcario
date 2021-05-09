@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+	<h1>Conecte-se na sua conta</h1>
+	<form action="search.html">
+		<div>
+			<label for="emailInputField">Email:</label>
+			<input id="emailInputField" type="email" placeholder="eu@examplo.com.br" required />
+		</div>
+		<div>
+			<label for="passwordInputField">Senha:</label>
+			<input id="passwordInputField" type="password" required />
+		</div>
+		<button type="submit">Entrar</button>
+	</form>
+	<a href="cadastro.html" class="register">Você ainda não possui conta? Clique aqui e cadastre-se!</a>
+</div>
+{% endblock %}
