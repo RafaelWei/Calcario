@@ -40,16 +40,19 @@ function validateAndSubmit() {
 		return false;
 	}
 
-	const hash = md5(password);
 	const email = document.getElementById("emailInputField").value;
+	const passwordHash = md5(password);
 
-	fetch("/post", {
+	const formData = new FormData();
+
+	formData.append('email', email);
+	formData.append('passwordHash', passwordHash);
+
+	fetch("/auth/register", {
 		method: "POST",
-		body: JSON.stringify({ "email": email, "hash": hash })
-	}).then(() => {
-		alert("Obrigado por se cadastrar.");
-
-		window.location.assign("login.html");
+		credentials: "same-origin",
+		redirect: "follow",
+		body: formData
 	});
 
 	return true;
