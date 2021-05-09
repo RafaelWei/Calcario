@@ -49,7 +49,7 @@ function validateAndSubmit() {
 	}).then(() => {
 		alert("Obrigado por se cadastrar.");
 
-		window.location.assign("index.html");
+		window.location.assign("login.html");
 	});
 
 	return true;
