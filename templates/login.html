@@ -2,6 +2,11 @@
 
 {% block title %}Calcário - Login{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/login.css') }}" />
+<script defer src="{{ url_for('static', filename='/js/login.js') }}"></script> 
+{% endblock %}
+
 {% block content %}
 <div class="container">
 	<h1>Conecte-se na sua conta</h1>

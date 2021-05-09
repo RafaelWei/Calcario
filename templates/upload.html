@@ -2,6 +2,11 @@
 
 {% block title %}Calcário - Upload{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/upload.css') }}" />
+<script defer src="{{ url_for('static', filename='/js/upload.js') }}"></script> 
+{% endblock %}
+
 {% block content %}
 <div class="container">
 	<h1>Faça o upload do seu PFC</h1>
