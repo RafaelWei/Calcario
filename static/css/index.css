@@ -5,3 +5,35 @@
     text-align: center;
     margin-top: 2rem;
 }
+
+.searchresultsblock {
+    margin-top: 2rem;
+}
+
+#searchresultsnumber {
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: -1rem;
+}
+
+.searchresult {
+    border-radius: 1rem;
+    border: 0.1rem solid blue;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: rgb(195, 193, 193);
+}
+
+.searchresult h2 {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.searchresult button {
+    display: inline-block;
+    width: 45%;
+}
