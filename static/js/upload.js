@@ -1,7 +1,8 @@
 function submitWork() {
 	const title = document.getElementById("title").value;
-	const authors = document.getElementById("authors");
-	const advisers = document.getElementById("supervisors");
+	const authors = Array.from(document.getElementsByClassName("author"));
+	console.log(authors);
+	const advisers = Array.from(document.getElementsByClassName("adviser"));
 	const institution = document.getElementById("inst").value;
 	const type = document.getElementById("type").value;
 	const date_of_publication = document.getElementById("date").value;
@@ -9,7 +10,7 @@ function submitWork() {
 	const keywords = document.getElementById("keywords").value;
 	const summary = document.getElementById("summary").value;
 
-	const file = document.getElementById("fileupload").value;
+	const file = document.getElementById("fileupload").files[0];
 
 	const formData = new FormData();
 
@@ -23,6 +24,8 @@ function submitWork() {
 	formData.append("keywords", keywords);
 	formData.append("abstract", summary);
 	formData.append("file", file);
+
+	console.log(formData["file"]);
 
 	fetch("/upload", {
 		method: "POST",
@@ -40,25 +43,31 @@ function submitWork() {
 	return true;
 }
 
-function addFields(num, names) {
-	// Number of inputs to create
-	var number = document.getElementById(num).value;
-	// Container <div> where dynamic content will be placed
-	var container = document.getElementById(names);
-	// Clear previous contents of the container
-	while (container.hasChildNodes()) {
-		container.removeChild(container.lastChild);
+function updateNumFields(nInput, destDiv, labelContent, className) {
+	const div = document.getElementById(destDiv);
+
+	const newN = document.getElementById(nInput).value;
+	const oldN = document.getElementById(destDiv).children.length / 2;
+
+	if (newN < 0) {
+		return;
 	}
-	for (i=0; i<number; i++){
-		// Append a node with a random text
-		container.appendChild(document.createTextNode(num + " " + (i+1) + ":"));
-		// Create an <input> element, set its type and name attributes
-		var input = document.createElement("input");
-		input.type = "text";
-		input.name = num + i;
-		input.required = true;
-		container.appendChild(input);
-		// Append a line break 
-		container.appendChild(document.createElement("br"));
+
+	if (newN > oldN) {
+		for (let i = oldN + 1; i <= newN; ++i) {
+			let label = document.createElement("label")
+			label["htmlFor"] = className;
+			label["textContent"] = labelContent + " " + i + ":";
+			div.appendChild(label);
+
+			let input = document.createElement("input");
+			input["name"] = className;
+			input["className"] = className;
+			input["required"] = true;
+			div.appendChild(input);
+		}
+	} else if (newN < oldN) {
+		div.removeChild(div.lastChild);
+		div.removeChild(div.lastChild);
 	}
 }

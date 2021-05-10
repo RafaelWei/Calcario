@@ -12,14 +12,14 @@
 	<h1>Faça o upload do seu arquivo</h1>	
 	<form action="javascript:;" onsubmit="return submitWork();">
 		<div id="authors">
-			<label for="Autor">Número de autores:</label>
-			<input id="Autor" type="number">
-			<a href="#" class="nameslink" id="filldetails" onclick='addFields("Autor", "authors")'>Digitar nomes</a>
+			<label for="authorNumber">Número de autores:</label>
+			<input id="authorNumber" type="number" onchange="updateNumFields('authorNumber', 'authorsNames', 'Autor', 'author');">
+			<div id="authorsNames"></div>
 		</div>
-		<div id="supervisors">
-			<label for="Orientador">Número de orientadores:</label>
-			<input id="Orientador" type="number">
-			<a href="#" class="nameslink" id="filldetails" onclick='addFields("Orientador", "supervisors")'>Digitar nomes</a>
+		<div id="advisers">
+			<label for="adviserNumber">Número de orientadores:</label>
+			<input id="adviserNumber" type="number" onchange="updateNumFields('adviserNumber', 'advisersNames', 'Orientador', 'adviser');">
+			<div id="advisersNames"></div>
 		</div>
 		<div>
 			<label for="title">Título:</label>
