@@ -9,14 +9,14 @@
 
 {% block content %}
 <div class="container">
-	<h1>Faça o upload do seu PFC</h1>
+	<h1>Faça o upload do seu arquivo</h1>
 	<form onsubmit="return alert('Seu PFC foi submetido.');">
 		<div id="authors">
 			<label for="Autor">Número de autores:</label>
 			<input id="Autor" type="number">
 			<a href="#" class="nameslink" id="filldetails" onclick='addFields("Autor", "authors")'>Digitar nomes</a>
 		</div>
-		<div id="supervisors" />
+		<div id="supervisors">
 			<label for="Orientador">Número de orientadores:</label>
 			<input id="Orientador" type="number">
 			<a href="#" class="nameslink" id="filldetails" onclick='addFields("Orientador", "supervisors")'>Digitar nomes</a>
