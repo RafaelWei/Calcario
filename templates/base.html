@@ -19,19 +19,19 @@
 		<header>
 			<nav class="navbar navbar-light bg-dark">
 				<div class="container-fluid">
-					<a href="index.html" class="navbar-brand text-white">Calcário</a>
+					<a href="{{ url_for('search') }}" class="navbar-brand text-white">Calcário</a>
 					<form class="d-flex">
 						{% if g.privilege_level == 0 %}
-							<a href="login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+							<a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
 						{% else %}
-							<a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Logout</a>
+							<a href="{{ url_for('auth.logout') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Logout</a>
 						{% endif %}
-						<a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
+							<a href="{{ url_for('search') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
 						{% if g.privilege_level >= 1 %}
-							<a href="upload.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Upload</a>
+							<a href="{{ url_for('upload') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Upload</a>
 						{% endif %}
 						{% if g.privilege_level == 2 %}
-							<a href="register.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastro</a>
+							<a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastro</a>
 						{% endif %}
 					</form>
 				</div>
