@@ -15,7 +15,7 @@ function submitWork() {
 
 	formData.append("title", title);
 	formData.append("authors", authors.map(x => x.value).join(","));
-	formData.append("advisers", supervisors.map(x => x.value).join(",")));
+	formData.append("advisers", advisers.map(x => x.value).join(","));
 	formData.append("institution", institution);
 	formData.append("type", type);
 	formData.append("date_of_publication", date_of_publication);
