@@ -10,7 +10,7 @@
 {% block content %}
 <div class="container">
 	<h1>Faça o upload do seu PFC</h1>
-	<form onsubmit="return alert('Seu PFC foi submetido.');">
+	<form action="javascript:;" onsubmit="return submitWork();">
 		<div id="authors">
 			<label for="Autor">Número de autores:</label>
 			<input id="Autor" type="number">
@@ -33,9 +33,9 @@
 			<label for="type">Tipo:</label>
 			<select name="type" id="type">
 				<option value="" disabled selected>Selecione sua opção</option>
-				<option value="pfc">PFC</option>
-				<option value="dissertacao">Dissertação</option>
-				<option value="tese">Tese</option>
+				<option>PFC</option>
+				<option>Dissertação</option>
+				<option>Tese</option>
 			</select>
 		</div>
 		<div>
