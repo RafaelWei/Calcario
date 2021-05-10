@@ -22,11 +22,10 @@ function checkPasswordStrength() {
 }
 
 function validateAndSubmit() {
-	const passwordInputField = document.getElementById("passwordInputField");
-	const passwordConfirmInputField = document.getElementById("passwordConfirmInputField");
+	const email = document.getElementById("emailInputField").value;
 
-	const password = passwordInputField.value;
-	const passwordConfirm = passwordConfirmInputField.value;
+	const password = document.getElementById("passwordInputField").value;
+	const passwordConfirm = document.getElementById("passwordConfirmInputField").value;
 
 	if (password != passwordConfirm) {
 		alert("Senha e confirmação de senha diferem.");
@@ -40,16 +39,24 @@ function validateAndSubmit() {
 		return false;
 	}
 
-	const hash = md5(password);
-	const email = document.getElementById("emailInputField").value;
+	const passwordHash = md5(password);
 
-	fetch("/post", {
+	const formData = new FormData();
+
+	formData.append("email", email);
+	formData.append("passwordHash", passwordHash);
+
+	fetch("/register", {
 		method: "POST",
-		body: JSON.stringify({ "email": email, "hash": hash })
-	}).then(() => {
-		alert("Obrigado por se cadastrar.");
-
-		window.location.assign("login.html");
+		credentials: "same-origin",
+		redirect: "follow",
+		body: formData
+	}).then(response => {
+		if (response.ok) {
+			alert("Usuário cadastrado com sucesso.");
+		} else {
+			alert("Erro interno. Por favor, tente novamente mais tarde.");
+		}
 	});
 
 	return true;

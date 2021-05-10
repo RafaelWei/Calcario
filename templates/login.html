@@ -2,10 +2,15 @@
 
 {% block title %}Calcário - Login{% endblock %}
 
+{% block head %}
+<script defer src="{{ url_for('static', filename='/js/md5.min.js') }}"></script> 
+<script defer src="{{ url_for('static', filename='/js/login.js') }}"></script> 
+{% endblock %}
+
 {% block content %}
 <div class="container">
 	<h1>Conecte-se na sua conta</h1>
-	<form action="search.html">
+	<form action="javascript:;" onsubmit="return login();">
 		<div>
 			<label for="emailInputField">Email:</label>
 			<input id="emailInputField" type="email" placeholder="eu@examplo.com.br" required />
