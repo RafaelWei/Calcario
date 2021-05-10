@@ -19,7 +19,7 @@
 		<header>
 			<nav class="navbar navbar-light bg-dark">
 				<div class="container-fluid">
-					<a href="{{ url_for('search') }}" class="navbar-brand text-white">Calcário</a>
+					<a href="{{ url_for('index') }}" class="navbar-brand text-white">Calcário</a>
 					<form class="d-flex">
 						{% if g.privilege_level == 0 %}
 							<a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
