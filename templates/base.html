@@ -21,10 +21,14 @@
 				<div class="container-fluid">
 					<a href="index.html" class="navbar-brand text-white">Calcário</a>
 					<form class="d-flex">
-						<a href="register.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastro</a>
 						<a href="login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
 						<a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
-						<a href="upload.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Upload</a>
+						{% if g.privilege_level >= 1 %}
+							<a href="upload.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Upload</a>
+						{% endif %}
+						{% if g.privilege_level == 2 %}
+							<a href="register.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastro</a>
+						{% endif %}
 					</form>
 				</div>
 			</nav>
