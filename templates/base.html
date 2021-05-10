@@ -21,7 +21,11 @@
 				<div class="container-fluid">
 					<a href="index.html" class="navbar-brand text-white">Calcário</a>
 					<form class="d-flex">
-						<a href="login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+						{% if g.privilege_level == 0 %}
+							<a href="login.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+						{% else %}
+							<a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Logout</a>
+						{% endif %}
 						<a href="index.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisa</a>
 						{% if g.privilege_level >= 1 %}
 							<a href="upload.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Upload</a>
