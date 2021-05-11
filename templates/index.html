@@ -14,32 +14,32 @@
 	<form action="javascript:;" onsubmit="return searchWork();">
 		<div>
 			<label for="author">Autor:</label>
-			<input id="author" type="text" required />
+			<input id="author" type="text" />
 		</div>
 		<div>
 			<label for="supervisor">Orientador:</label>
-			<input id="supervisor" type="text" required />
+			<input id="supervisor" type="text" />
 		</div>
 		<div>
 			<label for="title">Título:</label>
-			<input id="title" type="text" required />
+			<input id="title" type="text" />
 		</div>
 		<div>
 			<label for="inst">Instituição de ensino:</label>
-			<input id="inst" type="text" required />
+			<input id="inst" type="text" />
 		</div>
 		<div>
 			<label for="type">Tipo:</label>
 			<select name="type" id="type">
 				<option value="" disabled selected>Selecione sua opção</option>
-				<option value="pfc">PFC</option>
-				<option value="dissertacao">Dissertação</option>
-				<option value="tese">Tese</option>
+				<option>PFC</option>
+				<option>Dissertação</option>
+				<option>Tese</option>
 			</select>
 		</div>
 		<div>
 			<label for="date">Ano de publicação:</label>
-			<input id="date" type="text" required />
+			<input id="date" type="text" />
 		</div>
 		<div>
 			<label for="area">Área de pesquisa:</label>
@@ -54,9 +54,37 @@
 		</div>
 		<div>
 			<label for="keywords">Palavras-chave:</label>
-			<input id="keywords" type="text" required />
+			<input id="keywords" type="text" />
 		</div>
 		<button type="submit">Buscar</button>
 	</form>
+	{% if show_results %}
+	<div class="searchresultsblock">
+		<h1>Resultados da Pesquisa</h1>
+		<p id="searchresultsnumber">{{ results|length }} resultados encontrados.</p>
+
+		{% for result in results %}
+		<div class="searchresult">
+			<h2>{{ result.title }}</h2>
+			<ul>
+				<li>Autores: {{ result.authors }}</li>
+				<li>Orientadores: {{ result.advisers }}</li>
+				<li>Instituição: {{ result.institution }}</li>
+				<li>Tipo de trabalho: {{ result.type }}</li>
+				<li>Data de publicação: {{ result.date_of_publication }}</li>
+				<li>Área de pesquisa: {{ result.field }}</li>
+				<li>Palavras-chave: {{ result.keywords }}</li>
+				<li>Resumo: {{ result.abstract }}</li>
+			</ul>
+			<div class="buttons">
+				<a href="{{ url_for('download') }}?id={{result.wid}}"><button>Baixar</button></a>
+				{% if g.privilege_level > 0 %}
+				<a href="{{ url_for('delete') }}?id={{result.wid}}"><button onclick="return confirm('Tem certeza que quer deletar este trabalho?');">Excluir</button></a>
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
 </div>
 {% endblock %}

@@ -16,9 +16,13 @@ function login() {
 		body: formData
 	}).then(response => {
 		if (response.ok) {
-			alert("Login efetuado.");
+			alert("Login efetuado com sucesso.");
+
+			window.location = response.url;
 		} else {
 			alert("Usuário ou senha inválidos.");
 		}
 	});
+
+	return true;
 }

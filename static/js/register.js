@@ -54,6 +54,8 @@ function validateAndSubmit() {
 	}).then(response => {
 		if (response.ok) {
 			alert("Usuário cadastrado com sucesso.");
+
+			window.location = response.url;
 		} else {
 			alert("Erro interno. Por favor, tente novamente mais tarde.");
 		}

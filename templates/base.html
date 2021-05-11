@@ -32,6 +32,7 @@
 						{% endif %}
 						{% if g.privilege_level == 2 %}
 							<a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastro</a>
+							<a href="{{ url_for('backup') }}" onclick="alert('Backup efetuado com sucesso.');" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Fazer backup</a>
 						{% endif %}
 					</form>
 				</div>

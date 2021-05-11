@@ -1,7 +1,6 @@
 function submitWork() {
 	const title = document.getElementById("title").value;
 	const authors = Array.from(document.getElementsByClassName("author"));
-	console.log(authors);
 	const advisers = Array.from(document.getElementsByClassName("adviser"));
 	const institution = document.getElementById("inst").value;
 	const type = document.getElementById("type").value;
@@ -35,6 +34,8 @@ function submitWork() {
 	}).then(response => {
 		if (response.ok) {
 			alert("Trabalho enviado com sucesso.");
+
+			window.location = response.url;
 		} else {
 			alert("Erro interno. Por favor, tente novamente mais tarde.");
 		}
