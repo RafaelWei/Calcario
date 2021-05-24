@@ -2,7 +2,7 @@ function searchWork() {
 	const params = {
 		title: document.getElementById("title").value,
 		authors: document.getElementById("author").value,
-		advisers: document.getElementById("supervisor").value,
+		advisors: document.getElementById("supervisor").value,
 		institution: document.getElementById("inst").value,
 		type: document.getElementById("type").value,
 		date_of_publication: document.getElementById("date").value,

@@ -1,28 +1,17 @@
 function submitWork() {
-	const title = document.getElementById("title").value;
-	const authors = Array.from(document.getElementsByClassName("author"));
-	const advisers = Array.from(document.getElementsByClassName("adviser"));
-	const institution = document.getElementById("inst").value;
-	const type = document.getElementById("type").value;
+	const file = document.getElementById("fileupload").files[0];
 	const date_of_publication = document.getElementById("date").value;
 	const field = document.getElementById("area").value;
-	const keywords = document.getElementById("keywords").value;
-	const summary = document.getElementById("summary").value;
 
-	const file = document.getElementById("fileupload").files[0];
+	console.log(file);
+	console.log(date_of_publication);
+	console.log(field);
 
 	const formData = new FormData();
 
-	formData.append("title", title);
-	formData.append("authors", authors.map(x => x.value).join(","));
-	formData.append("advisers", advisers.map(x => x.value).join(","));
-	formData.append("institution", institution);
-	formData.append("type", type);
+	formData.append("file", file);
 	formData.append("date_of_publication", date_of_publication);
 	formData.append("field", field);
-	formData.append("keywords", keywords);
-	formData.append("abstract", summary);
-	formData.append("file", file);
 
 	console.log(formData["file"]);
 

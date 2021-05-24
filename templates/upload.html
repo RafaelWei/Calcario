@@ -9,34 +9,11 @@
 
 {% block content %}
 <div class="container">
-	<h1>Faça o upload do seu arquivo</h1>	
+	<h1>Faça o upload do seu arquivo</h1>
 	<form action="javascript:;" onsubmit="return submitWork();">
-		<div id="authors">
-			<label for="authorNumber">Número de autores:</label>
-			<input id="authorNumber" type="number" onchange="updateNumFields('authorNumber', 'authorsNames', 'Autor', 'author');">
-			<div id="authorsNames"></div>
-		</div>
-		<div id="advisers">
-			<label for="adviserNumber">Número de orientadores:</label>
-			<input id="adviserNumber" type="number" onchange="updateNumFields('adviserNumber', 'advisersNames', 'Orientador', 'adviser');">
-			<div id="advisersNames"></div>
-		</div>
 		<div>
-			<label for="title">Título:</label>
-			<input id="title" type="text" required />
-		</div>
-		<div>
-			<label for="inst">Instituição de ensino:</label>
-			<input id="inst" type="text" required />
-		</div>
-		<div>
-			<label for="type">Tipo:</label>
-			<select name="type" id="type">
-				<option value="" disabled selected>Selecione sua opção</option>
-				<option>PFC</option>
-				<option>Dissertação</option>
-				<option>Tese</option>
-			</select>
+			<label for="fileupload">Arquivo:</label>
+			<input id="fileupload" type="file" required/>
 		</div>
 		<div>
 			<label for="date">Data de publicação:</label>
@@ -52,19 +29,6 @@
 				<option>Engenharia eletrônica</option>
 				<option>Sistemas de informação</option>
 			</select>
-		</div>
-		<div>
-			<label for="keywords">Palavras-chave:</label>
-			<input id="keywords" type="text" required />
-		</div>
-		<div>
-			<label for="summary">Resumo:</label>
-			</br>
-			<textarea id="summary" type="text" required></textarea>
-		</div>
-		<div>
-			<label for="fileupload">Arquivo:</label>
-			<input id="fileupload" type="file" required />
 		</div>
 		<button type="submit">Enviar</button>
 	</form>
